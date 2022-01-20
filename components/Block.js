@@ -1,14 +1,10 @@
 import React from "react";
-import { StyleSheet, Text, ScrollView, TouchableOpacity, View} from 'react-native';
-import { Linking } from 'react-native';
+import { StyleSheet, Text, ScrollView, View} from 'react-native';
 import { Icon } from 'react-native-elements';
 
 function Block({ data}) {
     return(
         <ScrollView style={styles.container}>
-                <View>
-                <Text style={styles.text}>{data.text}</Text>
-                </View>
                 <View>
                 <Text style={styles.text}>{data.text}</Text>
                 </View>
@@ -69,6 +65,7 @@ const styles = StyleSheet.create({
     like:{
         flex:1,
         fontSize:20,
+        alignSelf:"center",
     },
     replywrap:{
         flex:1,
@@ -78,6 +75,7 @@ const styles = StyleSheet.create({
     reply:{
         flex:1,
         fontSize:20,
+        alignSelf:"center",
     },
     retweetwrap:{
         flex:1,
@@ -86,6 +84,7 @@ const styles = StyleSheet.create({
     retweet:{
         flex:1,
         fontSize:20,
+        alignSelf:"center",
     },
 });
 

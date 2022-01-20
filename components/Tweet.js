@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { StyleSheet,View, Text, ScrollView, TouchableOpacity} from 'react-native';
+import { StyleSheet,View, Text, ScrollView} from 'react-native';
 import { Feed } from "./Feed";
 import Block from './Block';
 

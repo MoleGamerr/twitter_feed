@@ -1,6 +1,5 @@
 import React, {createContext, useState, useEffect} from "react";
-import { Appbar } from 'react-native-paper';
-import {KeyboardAvoidingView, Platform, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard,ScrollView } from "react-native";
+import {KeyboardAvoidingView, Platform, StyleSheet, View, TextInput, TouchableOpacity, Keyboard } from "react-native";
 import { Icon } from 'react-native-elements';
 
 export const Feed = createContext();
