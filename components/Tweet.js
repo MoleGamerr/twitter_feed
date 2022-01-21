@@ -5,25 +5,35 @@ import Block from './Block';
 
 function Tweet() {
     const { data } = useContext(Feed);
-    return (
-        
-        <ScrollView style={styles.container}>
-        <View>{data ? data.data.map(news => 
-            <Block data={news} />
-         ) : <Text>wait</Text>
-         }</View>
-         </ScrollView>
-
-)
+    try {
+        return (
+            <ScrollView style={styles.container}>
+                <View>{data ? data.data.map(news => 
+                    <Block data={news} />
+                    ) : <Text style={styles.error}>wait</Text>
+                }</View>
+            </ScrollView>
+        )
+    } catch (error) {
+        return (
+            <ScrollView style={styles.container}>
+                <Text style={styles.error}>Nothing found!</Text>
+             </ScrollView>
+        )
+    }
+   
 }
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:'#fff',
+        backgroundColor:'#E7EBEF',
         textAlign: 'center',
         marginTop:0,
         marginBottom: 75,
-        
+    },
+    error:{
+        alignSelf:"center",
+        fontSize:20,
     }
 });
 export default Tweet
